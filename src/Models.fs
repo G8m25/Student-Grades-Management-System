@@ -1,12 +1,11 @@
 module StudentGrades.Models
 
-/// One student. Records are immutable: to "change" a student we build a new record.
+/// student data type
 type Student =
     { Id: int
       Name: string
       Grades: float list }
 
-/// The two user roles required by the project.
 type Role =
-    | Admin   // full control over the database and grade editing
-    | Viewer  // read-only access to grades and reports
+    | Admin   // full control over db and grade editing
+    | Viewer  // read-only access 
