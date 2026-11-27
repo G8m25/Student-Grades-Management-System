@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>StudentGrades</AssemblyName>
+    <RollForward>LatestMajor</RollForward>
+  </PropertyGroup>
+
+  <!-- ORDER MATTERS in F#: a file can only use the files listed ABOVE it. -->
+  <ItemGroup>
+    <Compile Include="src/Models.fs" />       <!-- Role 1 -->
+    <Compile Include="src/Database.fs" />     <!-- Role 2 -->
+    <Compile Include="src/Statistics.fs" />   <!-- Role 3 -->
+    <Compile Include="src/Analysis.fs" />     <!-- Role 4 -->
+    <Compile Include="src/Storage.fs" />      <!-- Role 4 -->
+    <Compile Include="src/Auth.fs" />         <!-- Role 5 -->
+    <Compile Include="src/LoginForm.fs" />    <!-- Role 6 -->
+    <Compile Include="src/ReportForm.fs" />   <!-- Role 7 -->
+    <Compile Include="src/MainForm.fs" />     <!-- Role 6 -->
+    <Compile Include="src/Program.fs" />      <!-- Role 7 -->
+  </ItemGroup>
+
+</Project>
